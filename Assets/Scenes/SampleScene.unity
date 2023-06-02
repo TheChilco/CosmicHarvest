@@ -278,9 +278,9 @@ MonoBehaviour:
   distance: 30.00001
   xSpeed: 5
   ySpeed: 5
-  zoomSpeed: 15
-  minZoom: 30
-  maxZoom: 75
+  zoomSpeed: 20
+  minZoom: 25
+  maxZoom: 50
   yMinLimit: -80
   yMaxLimit: 80
 --- !u!4 &196339499

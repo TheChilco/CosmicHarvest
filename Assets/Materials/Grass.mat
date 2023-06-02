@@ -129,16 +129,16 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _1st2nd_Shades_Feather: 0.1
-    - _1st_ShadeColor_Feather: 0.1
-    - _1st_ShadeColor_Step: 0.618
-    - _2nd_ShadeColor_Feather: 0.1
-    - _2nd_ShadeColor_Step: 0.219
+    - _1st2nd_Shades_Feather: 0.096
+    - _1st_ShadeColor_Feather: 0.194
+    - _1st_ShadeColor_Step: 0.55
+    - _2nd_ShadeColor_Feather: 0.096
+    - _2nd_ShadeColor_Step: 0.202
     - _Add_Antipodean_RimLight: 0
     - _Ap_RimLight_FeatherOff: 0
     - _Ap_RimLight_Power: 0.1
-    - _BaseColor_Step: 0.618
-    - _BaseShade_Feather: 0.1
+    - _BaseColor_Step: 0.55
+    - _BaseShade_Feather: 0.194
     - _Base_Speed: 0
     - _BlurLevelMatcap: 0
     - _BumpScale: 1
@@ -198,8 +198,8 @@ Material:
     - _OcclusionStrength: 1
     - _Offset_X_Axis_BLD: -0.05
     - _Offset_Y_Axis_BLD: 0.09
-    - _Offset_Z: 0
-    - _Outline_Width: 15
+    - _Offset_Z: 50
+    - _Outline_Width: 8
     - _Parallax: 0.02
     - _RimLight: 0
     - _RimLight_FeatherOff: 0
@@ -210,8 +210,8 @@ Material:
     - _Rotate_NormalMapForMatCapUV: 0
     - _Scroll_EmissiveU: 0
     - _Scroll_EmissiveV: 0
-    - _Set_SystemShadowsToBase: 1
-    - _ShadeColor_Step: 0.219
+    - _Set_SystemShadowsToBase: 0
+    - _ShadeColor_Step: 0.202
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -238,8 +238,8 @@ Material:
     - _utsTechnique: 0
     - _utsVersion: 2.09
     m_Colors:
-    - _1st_ShadeColor: {r: 0.21746556, g: 0.41509432, b: 0.15859737, a: 1}
-    - _2nd_ShadeColor: {r: 0.13332146, g: 0.2924528, b: 0.08690815, a: 1}
+    - _1st_ShadeColor: {r: 0.19928437, g: 0.38679248, b: 0.14413494, a: 1}
+    - _2nd_ShadeColor: {r: 0.11450311, g: 0.23584908, b: 0.078987196, a: 1}
     - _Ap_RimLightColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColor: {r: 0.33149737, g: 0.5471698, b: 0.2710039, a: 1}
     - _Color: {r: 0.33149734, g: 0.5471698, b: 0.27100387, a: 1}

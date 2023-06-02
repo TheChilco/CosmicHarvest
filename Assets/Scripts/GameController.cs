@@ -9,7 +9,6 @@ public class GameController : MonoBehaviour
     public Material[] shaders; // Array of shaders
     public Transform spawnPoint; // Point where the planet will be spawned
     public Transform currentTarget; // The current target for the camera
-    public CameraController cameraController; // Reference to the camera controller
     public Button spawnButton;
 
     private GameObject newPlanet;
