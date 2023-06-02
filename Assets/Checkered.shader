@@ -2,11 +2,9 @@ Shader "Custom/Checkered"
 {
     Properties
     {
-        _MainTex ("Texture", 2D) = "white" {}
         _Color1 ("Color 1", Color) = (1, 0, 0, 1)
         _Color2 ("Color 2", Color) = (0, 0, 1, 1)
-        _TileX ("Tile X", Range(1, 20)) = 10
-        _TileY ("Tile Y", Range(1, 20)) = 10
+        _Tile ("Tile", Range(1, 20)) = 10
     }
     SubShader
     {
@@ -23,33 +21,30 @@ Shader "Custom/Checkered"
             struct appdata
             {
                 float4 vertex : POSITION;
-                float2 uv : TEXCOORD0;
             };
 
             struct v2f
             {
-                float2 uv : TEXCOORD0;
+                float3 worldPos : TEXCOORD0;
                 float4 vertex : SV_POSITION;
             };
 
-            sampler2D _MainTex;
-            float4 _MainTex_ST;
             float4 _Color1;
             float4 _Color2;
-            float _TileX;
-            float _TileY;
+            float _Tile;
 
             v2f vert (appdata v)
             {
                 v2f o;
                 o.vertex = UnityObjectToClipPos(v.vertex);
-                o.uv = v.uv;
+                o.worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
                 return o;
             }
 
             fixed4 frag (v2f i) : SV_Target
             {
-                fixed2 grid = fmod(floor(i.uv * fixed2(_TileX, _TileY)), 2.0);
+                fixed3 pos = i.worldPos * _Tile;
+                fixed2 grid = fmod(floor(pos.xz), 2.0);
                 fixed4 col = lerp(_Color1, _Color2, grid.x * grid.y + (1 - grid.x) * (1 - grid.y));
                 return col;
             }
