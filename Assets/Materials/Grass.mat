@@ -210,7 +210,7 @@ Material:
     - _Rotate_NormalMapForMatCapUV: 0
     - _Scroll_EmissiveU: 0
     - _Scroll_EmissiveV: 0
-    - _Set_SystemShadowsToBase: 0
+    - _Set_SystemShadowsToBase: 1
     - _ShadeColor_Step: 0.1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -227,7 +227,7 @@ Material:
     - _Tweak_MatCapUV: 0
     - _Tweak_MatcapMaskLevel: 0
     - _Tweak_RimLightMaskLevel: 0
-    - _Tweak_SystemShadowsLevel: 0
+    - _Tweak_SystemShadowsLevel: -0.305
     - _Tweak_transparency: 0
     - _UVSec: 0
     - _Unlit_Intensity: 0.96

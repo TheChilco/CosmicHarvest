@@ -331,6 +331,7 @@ MonoBehaviour:
   planetPrefabs:
   - {fileID: 3266455183600903012, guid: 5c89a1f9884641d478a4bf367e855989, type: 3}
   - {fileID: 919132149155446097, guid: d19a0142efa90c74087f1e4c26817e61, type: 3}
+  - {fileID: 4799390284704276016, guid: 1536795bc3174784a8987e30a1a40281, type: 3}
   shaders:
   - {fileID: 2100000, guid: ab50cbf737833b742a9de36d49341ac9, type: 2}
   - {fileID: 2100000, guid: e537ee9fc89f3a04bad91a27f628ff70, type: 2}
@@ -733,7 +734,7 @@ ParticleSystemRenderer:
   m_FreeformStretching: 0
   m_RotateWithStretchDirection: 1
   m_VertexStreams: 00010304
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
@@ -930,7 +931,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startColor:
       serializedVersion: 2
-      minMaxState: 2
+      minMaxState: 0
       minColor: {r: 0.18867922, g: 0.18867922, b: 0.18867922, a: 1}
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
@@ -5477,7 +5478,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameController: {fileID: 361029028}
-  orbitSpeed: 10
+  minOrbitSpeed: 7.5
+  maxOrbitSpeed: 20
+  transitionSpeed: 0.03
 --- !u!1 &1527601525
 GameObject:
   m_ObjectHideFlags: 0
