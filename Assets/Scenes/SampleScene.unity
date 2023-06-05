@@ -276,8 +276,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameController: {fileID: 361029028}
   distance: 30.00001
-  xSpeed: 5
-  ySpeed: 5
+  xSpeed: 20
+  ySpeed: 20
   zoomSpeed: 20
   minZoom: 25
   maxZoom: 50

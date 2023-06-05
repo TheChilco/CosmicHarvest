@@ -32,14 +32,14 @@ public class CameraController : MonoBehaviour
     {
         if (gameController != null && gameController.currentTarget != null)
         {
-            x += Input.GetAxis("Horizontal") * xSpeed * 0.02f;
-            y -= Input.GetAxis("Vertical") * ySpeed * 0.02f;
+            x += Input.GetAxis("Horizontal") * xSpeed * 0.02f * Time.deltaTime * 144f;
+            y -= Input.GetAxis("Vertical") * ySpeed * 0.02f * Time.deltaTime * 144f;
 
             // Clamping vertical rotation
             y = ClampAngle(y, yMinLimit, yMaxLimit);
 
             // Set the target zoom level
-            targetDistance -= Input.GetAxis("Mouse ScrollWheel") * zoomSpeed;
+            targetDistance -= Input.GetAxis("Mouse ScrollWheel") * zoomSpeed * Time.deltaTime;
             targetDistance = Mathf.Clamp(targetDistance, minZoom, maxZoom);
 
             // Interpolate from the current distance to the target distance
