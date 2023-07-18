@@ -13,13 +13,13 @@ public class GameController : MonoBehaviour
 
     private GameObject newPlanet;
 
-    void Start()
+    private void Start()
     {
         spawnButton.onClick.AddListener(SpawnRandomPlanet);
         SpawnRandomPlanet();
     }
 
-    void SpawnRandomPlanet()
+    private void SpawnRandomPlanet()
     {
         // Destroy the current planet if it exists
         if (newPlanet != null)

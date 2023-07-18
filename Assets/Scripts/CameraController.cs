@@ -39,7 +39,7 @@ public class CameraController : MonoBehaviour
             y = ClampAngle(y, yMinLimit, yMaxLimit);
 
             // Set the target zoom level
-            targetDistance -= Input.GetAxis("Mouse ScrollWheel") * zoomSpeed * Time.deltaTime;
+            targetDistance -= Input.GetAxis("Mouse ScrollWheel") * zoomSpeed;
             targetDistance = Mathf.Clamp(targetDistance, minZoom, maxZoom);
 
             // Interpolate from the current distance to the target distance

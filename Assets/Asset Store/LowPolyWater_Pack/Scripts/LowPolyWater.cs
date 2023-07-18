@@ -11,17 +11,17 @@ namespace LowPolyWater
         //Position where the waves originate from
         public Vector3 waveOriginPosition = new Vector3(0.0f, 0.0f, 0.0f);
 
-        MeshFilter meshFilter;
-        Mesh mesh;
-        Vector3[] vertices;
+        private MeshFilter meshFilter;
+        private Mesh mesh;
+        private Vector3[] vertices;
 
         private void Awake()
         {
-            //Get the Mesh Filter of the gameobject
+            //Get the Mesh Filter of the game object
             meshFilter = GetComponent<MeshFilter>();
         }
 
-        void Start()
+        private void Start()
         {
             CreateMeshLowPoly(meshFilter);
         }
@@ -29,16 +29,16 @@ namespace LowPolyWater
         /// <summary>
         /// Rearranges the mesh vertices to create a 'low poly' effect
         /// </summary>
-        /// <param name="mf">Mesh filter of gamobject</param>
+        /// <param name="mf">Mesh filter of game object</param>
         /// <returns></returns>
-        MeshFilter CreateMeshLowPoly(MeshFilter mf)
+        private MeshFilter CreateMeshLowPoly(MeshFilter mf)
         {
             mesh = mf.sharedMesh;
 
             //Get the original vertices of the gameobject's mesh
             Vector3[] originalVertices = mesh.vertices;
 
-            //Get the list of triangle indices of the gameobject's mesh
+            //Get the list of triangle indices of the game object's mesh
             int[] triangles = mesh.triangles;
 
             //Create a vector array for new vertices 
@@ -60,8 +60,8 @@ namespace LowPolyWater
 
             return mf;
         }
-        
-        void Update()
+
+        private void Update()
         {
             GenerateWaves();
         }
@@ -70,7 +70,7 @@ namespace LowPolyWater
         /// Based on the specified wave height and frequency, generate 
         /// wave motion originating from waveOriginPosition
         /// </summary>
-        void GenerateWaves()
+        private void GenerateWaves()
         {
             for (int i = 0; i < vertices.Length; i++)
             {
